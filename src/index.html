@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<title>Speech2Logic AI IDE</title>
+
+<style>
+
+body{
+font-family: Arial;
+background:#0f172a;
+color:white;
+text-align:center;
+padding:40px;
+}
+
+textarea{
+width:70%;
+height:120px;
+font-size:18px;
+padding:10px;
+}
+
+button{
+padding:12px 20px;
+margin:10px;
+font-size:18px;
+cursor:pointer;
+background:#6366f1;
+border:none;
+color:white;
+border-radius:8px;
+}
+
+button:hover{
+background:#4f46e5;
+}
+
+.box{
+background:#1e293b;
+margin-top:20px;
+padding:20px;
+border-radius:10px;
+width:70%;
+margin-left:auto;
+margin-right:auto;
+text-align:left;
+}
+
+pre{
+background:#d1d5db;
+color:black;
+padding:20px;
+border-radius:8px;
+overflow:auto;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Speech2Logic AI IDE</h1>
+
+<button onclick="startSpeech()">🎤 Start Speaking</button>
+
+<h2>Speech Input</h2>
+
+<textarea id="speechInput" placeholder="Speak or type developer argument"></textarea>
+
+<br>
+
+<button onclick="runSystem()">⚡ Generate Logic</button>
+
+<div class="box">
+<h3>Detected Intent</h3>
+<p id="intent"></p>
+</div>
+
+<div class="box">
+<h3>AI Decision</h3>
+<p id="decision"></p>
+</div>
+
+<div class="box">
+<h3>Generated Logic</h3>
+<pre id="code"></pre>
+</div>
+
+<div class="box">
+<h3>AI Explanation</h3>
+<p id="explanation"></p>
+</div>
+
+<button onclick="speakExplanation()">🔊 Speak Explanation</button>
+
+<script src="script.js"></script>
+
+</body>
+</html>
